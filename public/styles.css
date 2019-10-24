@@ -1,0 +1,161 @@
+@font-face {
+  font-family: myFont;
+  src: url(Roboto-Regular.ttf);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .container {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+body {
+  background-color: #303060;
+  font-family: myFont;
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  background-color: #222222;
+  padding: 0px;
+  margin: 0px;
+}
+
+header h1 {
+  color: #FFFFFF;
+  padding: 20px 0px;
+  margin: 0px;
+  float: left;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: right;
+  margin: 0px;
+  padding: 20px 0px 0px 0px;
+}
+
+.taskList {
+  margin: 0px;
+  padding: 0px;
+}
+
+.taskList li {
+  list-style: none;
+}
+
+.taskList li button {
+  background-color: #222222;
+  border: 2px solid #2B2BFF;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 16px;
+  margin-top: 15px;
+  padding: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.taskList li button:hover {
+  background-color: #2B2BFF;
+  cursor: pointer;
+}
+
+.taskList li button:active {
+  background-color: #2B2BFF;
+}
+
+.formEditTask {
+  width: 100%;
+  margin: 30px 0px;
+  padding: 10px 0px;
+}
+
+.formButtons {
+  text-align: center;
+}
+
+.formButtons button {
+  margin: 0px 10px;
+}
+
+.btBlue {
+  background-color: #222222;
+  border: 2px solid #2B2BFF;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin: 0px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.btBlue:hover {
+  background-color: #2B2BFF;
+  cursor: pointer;
+}
+
+.btBlue:active {
+  background-color: #2B2BFF;
+}
+
+.btGreen {
+  background-color: #222222;
+  border: 2px solid #2BFF2B;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin: 0px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.btGreen:hover {
+  background-color: #2BFF2B;
+  cursor: pointer;
+}
+
+.btGreen:active {
+  background-color: #2BFF2B;
+}
+
+.btRed {
+  background-color: #222222;
+  border: 2px solid #FF2B2B;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin: 0px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.btRed:hover {
+  background-color: #FF2B2B;
+  cursor: pointer;
+}
+
+.btRed:active {
+  background-color: #FF2B2B;
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Todo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+  </head>
+  <body ng-app="app" ng-controller="controller">
+    <header>
+      <div class="container">
+        <h1>Todo App</h1>
+        <nav><button class="btBlue" ng-click="showNewTaskForm()" ng-show="!newTaskFormShown && !editTaskFormShown">NEW TASK</button></nav>
+      </div>
+    </header>
+    <div class="container">
+
+      <!--This form is only shown, when a user is making a new task-->
+      <form ng-show="newTaskFormShown">
+        <input class="formEditTask" type="text" ng-model="newTask.item" placeholder="Task" name="task">
+        <div class="formButtons">
+          <button class="btRed" ng-click="hideNewTaskForm()">CANCEL</button>
+          <button class="btGreen" ng-click="postTask()">SAVE</button>
+        </div>
+      </form>
+
+      <!--This form is only shown, when a user is editing some existing task-->
+      <form ng-show="editTaskFormShown">
+        <input class="formEditTask" type="text" ng-model="editTask.item" placeholder="Task" name="task">
+        <div class="formButtons">
+          <button class="btRed" ng-click="deleteTask()">DELETE</button>
+          <button class="btGreen" ng-click="putTask()">UPDATE</button>
+        </div>
+      </form>
+
+      <!--Tasklist, which is hidden, when user is making or editing a task-->
+      <ul class="taskList" ng-show="!newTaskFormShown && !editTaskFormShown">
+        <li ng-repeat="task in tasks">
+          <button ng-click="showEditTaskForm(task)">
+            <div class="taskItem">{{task.item}}</div>
+          </button>
+        </li>
+      </ul>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="controller.js"></script>
+  </body>
+</html>
